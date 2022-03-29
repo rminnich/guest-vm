@@ -79,8 +79,8 @@ sudo chown -R 1001 tc_root/home/tc
 
 sudo cp cpud tc_root/bin
 sudo cp key.pub tc_root/root
-sudo rm tc_root/lib64
-sudo mkdir tc_root/lib64
+# sudo rm -f tc_root/lib64
+# sudo mkdir -p tc_root/lib64
 (cd tc_root &&
 sudo find . -print | sudo cpio -H newc -o | gzip > $LINUX_ROOT/$INITRD_NAME
 )
