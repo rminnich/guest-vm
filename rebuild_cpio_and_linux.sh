@@ -77,10 +77,6 @@ echo "Rebuilding CPIO"
 # In case someone is using ~tc and dropped some stuff in that home dir
 sudo chown -R 1001 tc_root/home/tc
 
-sudo cp cpud tc_root/bin
-sudo cp key.pub tc_root/root
-# sudo rm -f tc_root/lib64
-# sudo mkdir -p tc_root/lib64
 (cd tc_root &&
 sudo find . -print | sudo cpio -H newc -o | gzip > $LINUX_ROOT/$INITRD_NAME
 )
