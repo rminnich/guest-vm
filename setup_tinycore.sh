@@ -44,6 +44,10 @@ chmod 777 tc_root
 # Homedir for 'tc', in case we're using that account.  Will get chowned later.
 sudo mkdir -p tc_root/home/tc
 
+# random stuff we seem to need
+
+sudo mkdir -p tc_root/export tc_root/run
+
 # Even if we don't override rcS, I can't stand the screen clear
 sudo sed -i '/^clear$/d' tc_root/etc/init.d/rcS
 
