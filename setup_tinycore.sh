@@ -45,8 +45,9 @@ chmod 777 tc_root
 sudo mkdir -p tc_root/home/tc
 
 # random stuff we seem to need
+# and OMFG container runtime requires /boot for no good reason.
 
-sudo mkdir -p tc_root/export tc_root/run
+sudo mkdir -p tc_root/export tc_root/run tc_root/boot
 
 # Even if we don't override rcS, I can't stand the screen clear
 sudo sed -i '/^clear$/d' tc_root/etc/init.d/rcS
